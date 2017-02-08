@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+
+<!--     # Define new Form view - New ID = Module_Whatever_form and   Name =  module.whatever.inherit.form   		-->		
+  <record model="ir.ui.view" id="product_encoparts_form">    
+      <field name="name">product.encoparts.inherit.form</field>    
+
+<!--     # Associate to a Parent Model and View  =    Product.template  and  product.product_template_only_form_view    	-->
+      <field name="model">product.template</field>     
+      <field name="inherit_id" ref="product.product_template_only_form_view"/>
+							
+<!--     # Insert new fields in the Architecture/View Structure 		 	-->
+	<field name="arch" type="xml">
+
+<!--	  #   Locate Field and position after 								-->
+		<xpath expr="//field[@name='barcode']" position="after">  
+	         <field name="Alternate_name" />
+	  		 <field name="ProductURL" />   		
+	  		 <field name="Detail" />   				 
+		</xpath>
+     </field>
+  </record>  
+   
+</odoo>

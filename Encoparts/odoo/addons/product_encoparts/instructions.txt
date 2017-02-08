@@ -1,0 +1,21 @@
+
+1) Locate  view to be extended
+	View - product.template.product.form
+	Inherit - product.template.common.form
+
+	Model - product.template   (Parent Object)
+	Ext Id - product.product_template_only_form_view  ( Parent View ID)
+	Model - product.product_template_only_form_view
+
+2) Create new Addon Folder with 4 files
+	/product_encoparts
+		__init__.py
+		__manifest__.py 
+		
+		/model
+			__init__.py
+			Product_Encoparts.py
+	
+		/views 
+			product_encoparts_views.xml
+			

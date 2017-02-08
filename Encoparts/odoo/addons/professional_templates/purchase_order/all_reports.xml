@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+<template id="purchase_order">
+    <t t-call="report.html_container">
+         <t t-foreach="docs" t-as="o">
+            <t t-if="o.templ_id.key == 'professional_templates.PO_1_document'" t-call="professional_templates.PO_1_document" t-lang="o.partner_id.lang"/>
+            <t t-if="o.templ_id.key == 'professional_templates.PO_2_document'" t-call="professional_templates.PO_2_document" t-lang="o.partner_id.lang"/>
+            <t t-if="o.templ_id.key == 'professional_templates.PO_3_document'" t-call="professional_templates.PO_3_document" t-lang="o.partner_id.lang"/>
+            <t t-if="o.templ_id.key == 'professional_templates.PO_4_document'" t-call="professional_templates.PO_4_document" t-lang="o.partner_id.lang"/>
+            <t t-if="o.templ_id.key == 'professional_templates.PO_5_document'" t-call="professional_templates.PO_5_document" t-lang="o.partner_id.lang"/>
+            <t t-if="not o.templ_id.key" t-call="purchase.report_purchaseorder_document" t-lang="o.partner_id.lang"/>
+         </t>
+    </t>
+</template>
+</data>
+</openerp>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+
+<!--     # Define new Form view - New ID = Module_Whatever_form and   Name =  module.whatever.inherit.form   		-->		
+  <record model="ir.ui.view" id="contacts_encoparts_form">    
+      <field name="name">contacts.encoparts.inherit.form</field>    
+
+<!--     # Associate to a Parent Model and View  =    contacts.template  and  contacts.contacts_template_only_form_view    	-->
+      <field name="model">res.partner</field>     
+      <field name="inherit_id" ref="base.view_partner_form"/>
+							
+<!--     # Insert new fields in the Architecture/View Structure 		 	-->
+	<field name="arch" type="xml">
+
+<!--	  #   Locate Field and position after 								-->
+		<xpath expr="//field[@name='category_id']" position="after">  
+	         <field name="Tax_Id" />		 
+		</xpath>
+     </field>
+  </record>  
+   
+</odoo>
