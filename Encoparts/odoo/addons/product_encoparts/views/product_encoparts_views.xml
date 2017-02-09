@@ -16,7 +16,7 @@
 		<xpath expr="//field[@name='barcode']" position="after">  
 	         <field name="Alternate_name" />
 	  		 <field name="ProductURL" />   		
-	  		 <field name="Detail" />   				 
+	  		 <field name="Specification" />   				 
 		</xpath>
      </field>
   </record>  

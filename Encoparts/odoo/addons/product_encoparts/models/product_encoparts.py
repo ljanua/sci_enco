@@ -9,7 +9,7 @@ class Product_Encoparts(models.Model):
 
     Alternate_name = fields.Char('Alternate Name')
     ProductURL = fields.Char('Product URL')
-    Detail = fields.Text('Detail')
+    Specification = fields.Text('Specification')
 
 
  
