@@ -19,6 +19,21 @@
 	  		 <field name="Specification" />   				 
 		</xpath>
      </field>
+  </record>
+  
+  <record model="ir.ui.view" id="product_encoparts_form_view">
+  		<field name="name">product.notes.encoparts.inherit.form</field>
+  		<field name="model">product.template</field>
+  		<field name="inherit_id" ref="product.product_template_only_form_view"/>
+  		
+  	  	<field name="arch" type="xml">
+  	  		<field name="description_picking" position="after">
+                    <separator string="Description for Compatible Models" colspan="4"/>
+                    <field name="description_compatible_models" nolabel="1"
+                        placeholder="This note will have the compatible models of the product." colspan="4"/>
+             </field>
+   		</field>
+  		
   </record>  
    
 </odoo>
