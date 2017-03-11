@@ -3,6 +3,7 @@
 	<name>Encoparts</name>
 	<comment></comment>
 	<projects>
+		<project>odoo</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
